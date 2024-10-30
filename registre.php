@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<form action="/treatment.php" method="post">
+<form action="/treatment.php" method="post"> <!-- Formulaire envoyé en methode post à la page treatment.php -->
     <div class="form-group">
         <label for="name">Nom:</label>
      <input type="nom" name="nom" class="form-control" placeholder="Votre Nom" required>
@@ -32,7 +32,7 @@
      <input type ="password" name="password" placeholder="Entrer votre mot de passe" required>
      <br>
     </div>
-     <button type="submit" class="btn btn-primary"> S'incrire</button>   
+     <button type="submit" class="btn btn-primary">S'incrire</button>   
     </form>
      
 </body>
