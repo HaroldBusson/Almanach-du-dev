@@ -1,6 +1,12 @@
-<?php 
-
-$conn = new mysqli("localhost", "root", "", "Gazettedonkey");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    
 
 <form action="" method="post">
 <label for="login"> Login :</label>
@@ -10,6 +16,12 @@ $conn = new mysqli("localhost", "root", "", "Gazettedonkey");
 <input type="text" id="password" name="password" >
 
 </form>
+</body>
+</html>
+
+<?php 
+
+$conn = new mysqli("localhost", "root", "", "Gazettedonkey");
 
 if ((!isset$_POST($login) && !isset$_POST($password))){  // Si le login et le mot de passe envoyés sont corrects
     echo "Connexion réussie Bienvenue sur votre réseau social"; 
