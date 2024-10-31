@@ -21,7 +21,7 @@
 
 <?php 
 
-$conn = new mysqli("localhost", "root", "", "Gazettedonkey");
+$dsn = mysql:dbname; new mysqli("localhost", "root", "", "Gazettedonkey");
 
 if (isset($_POST['login']) && isset($_POST['password'])) {  // Si le login et le mot de passe envoyés sont corrects
     echo "Connexion réussie Bienvenue sur votre réseau social"; 
