@@ -21,8 +21,11 @@
 
 <?php 
 
-$dsn = (mysql:dbname; new mysqli"Gazettedonkey");
-
+try {
+    $dbh = new PDO('mysql:host=localhost;dbname=gazettedonkey', $user, $password);
+} catch (PDOException $e) {
+    // tenter de réessayer la connexion après un certain délai, par exemple
+}
 if (isset($_POST['login']) && isset($_POST['password'])) {  // Si le login et le mot de passe envoyés sont corrects
     echo "Connexion réussie Bienvenue sur votre réseau social"; 
 }
