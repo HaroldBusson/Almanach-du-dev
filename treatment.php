@@ -54,10 +54,12 @@ if (!empty($errors)) {
 $passwordHache = $passwordHash($password, PASSWORD_DEFAULT); //hachage du mot de passe
 
 $sql = "INSERT INTO users ($name, $firstname, $age, $sexe, $passwordHache, $email) VALUES(?, ?, ?, ?, ?, ?)";
-$stmt = $pdo->prepare($sql); // prepare() crée une déclaration préparée pour exécuter une requête SQL en toute sécurité.
+$stmt = $dbh->prepare($sql); // prepare() crée une déclaration préparée pour exécuter une requête SQL en toute sécurité.
 $stmt->bind_param("sss", $nom, $prenom, $age, $sexe, $motdepasse_hache, $email); // La fonction $stmt->bind_param() lie les variables aux paramètres d'une requête préparée, permettant une exécution sécurisée des requêtes SQL
 
 if ($stmt->execute()) {
+   header('Location: login.php'); // Redirection login.php
+   exit();
    echo "Inscription réussie !";
 } else {
    echo "Erreur" . $stmt->error;

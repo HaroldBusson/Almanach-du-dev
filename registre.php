@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'inscription</title>
+    <title>Formulaire d'inscription à l'Almanach du dev !</title>
 </head>
 
 <body>
-
+<h1><center>Formulaire d'inscription à l'Almanach du dev !</center></h1>
     <form action="/treatment.php" method="post"> <!-- Formulaire envoyé en methode post à la page treatment.php -->
         <div class="form-group">
             <label for="name">Nom:</label>
