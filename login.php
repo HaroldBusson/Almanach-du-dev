@@ -23,7 +23,7 @@
 </html>
 
 <?php
-
+/* page login */
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=gazettedonkey', $user, $password);
 } catch (PDOException $e) {

@@ -1,5 +1,5 @@
-/* page: registre.php */
 <?php
+/* page: registre.php */
 session_start();
 include_once('bd/gazettedonkey.php'); // fichier php contenant la connexion à la base de donnée
 
