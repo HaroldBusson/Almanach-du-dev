@@ -1,5 +1,5 @@
 <?php
-/* page: registre.php */
+/* page: treament.php */
 session_start();
 include_once('bd/gazettedonkey.php'); // fichier php contenant la connexion à la base de donnée
 
@@ -15,12 +15,12 @@ if (!empty($_POST)) {
 }
 
 if (isset($_POST['inscription'])) { /* on choisit le formulaire */
-   $name = htmlentities(trim($nom)); // On récupère le nom  htmlentities — Convertit tous les caractères éligibles en entités HTML
-   $firstname = htmlentities(trim($firsname)); // On récupère le prénom
-   $age = htmlentities(trim($age)); // on récupère l'age
-   $email  = htmlentities(strtolower(trim($email))); // on recupère le email
-   $password = htmlentities(trim($password)); // on recupère le mot de passe 
-   $confpassword = htmlentities(trim($confpassword));  // on récupère la confirmation du mot de passe
+   $name = $_POST['nom']; // On récupère le nom  htmlentities — Convertit tous les caractères éligibles en entités HTML
+   $firstname = $_POST['firstname']; // On récupère le prénom
+   $age = $_POST['age']; // on récupère l'age
+   $email  = $_POST['email']; // on recupère le email
+   $password = $_POST['password']; // on recupère le mot de passe 
+   $confpassword = $_POST['confpassword'];  // on récupère la confirmation du mot de passe
 
 }
 

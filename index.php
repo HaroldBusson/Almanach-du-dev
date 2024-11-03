@@ -9,7 +9,7 @@
 
 <body>
 
-    Bienvenue <?php $_POST[name] && $_POST[firstname]; ?>
+    Bienvenue <?php $_POST['name'] && $_POST['firstname']; ?>
 
     <h2>Voci les dernieres actualités</h2>
     <?php $stmt = $pdo->query("SELECT * FROM comments ORDERBY DESC");
